@@ -11,3 +11,18 @@ The bugs descriptions are read from a text file and then generated. The students
 - Several variations of bugs and students, each serving their own niche roles
 
 ## How To Run
+1. Clone the repository and extract contents
+2. Through either cmd or terminal, navigate to `/Tower-Defence/src`
+3. Run `java EcsBuildingDefence 4 20 sample.txt 100`
+
+The specified parameters are adjustable. `4` specifies the floors of the building, `20` refers to the health of the building - once it reaches 0 the simulation is over. `sample.txt` is the text files containing the bugs to be used in the simulation, the format is as follows:
+
+`Ardyn(NPB,1,1);Bahamut(NPB,1,2);Chaos(NPB,1,3);EmetSelch(NPB,1,4);Gilgamesh(NPB,1,5);Kefka(CMB,1,6);Memiroa(CMB,1,7);Necron(CMB,1,8);Sephiroth(CMB,1,9);Ultimecia(NTB,1,10)`
+
+`Ardyn` is the name of the bug, `NPB` is the class of bug with there being 3 classes of bugs each with their own HP:
+1. ConcurrentModificationBug
+2. NoneTerminationBug
+3. NullPointerBug
+`1` and `1` refer to the bug's level and the number of steps it takes, respectively.
+
+Each bug contained in the text file must be delimited by semi-colons.
